@@ -1,5 +1,12 @@
 name: CI/CD Pipeline
 
+defaults:
+  run:
+    working-directory: modern-web-app
+
+env:
+  NODE_VERSION: "21.6.2"
+
 on: push
 jobs:
   test:
@@ -18,12 +25,6 @@ jobs:
           npm ci
           npm run test:unit
 
-defaults:
-  run:
-    working-directory: modern-web-app
-
-env:
-  NODE_VERSION: "21.6.2"
 
 
 
